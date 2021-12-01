@@ -1,38 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  position: absolute;
+  top: 0vh;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav h1 {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(330.4deg, rgb(68, 188, 240) 4.54%, rgb(114, 152, 248) 59.2%, rgb(160, 153, 255) 148.85%);
+}
+
+.list-of-podcasts {
+  position: absolute;
+  top: 15vh;
+  left: 15vw;
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-of-podcasts .podcast {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.podcast1 {
+  background: linear-gradient(330.4deg, rgb(68, 188, 240) 4.54%, rgb(114, 152, 248) 59.2%, rgb(160, 153, 255) 148.85%);
+}
+
+.podcast2 {
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.list-of-podcasts .podcast audio {
+  width: 250px;
+  margin: 0px;
+  align-items: center;
+}
+
+.list-of-podcasts .podcast h2, .list-of-podcasts .podcast h3 {
+  position: relative;
+  color: white;
+  margin: 10px;
+}
+
+.list-of-podcasts .podcast h2 {
+  font-size: 35px;
+}
+
+.list-of-podcasts .podcast h3 {
+  font-size: 20px;
+}
+
+.list-of-podcasts .podcast img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 10px;
+}
+
+.list-of-podcasts .podcast button {
+  position: absolute;
+  outline: 0;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: 0;
+  padding: 10px;
+  bottom: 5%;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: lightcoral;
+  width: 60%;
+  z-index: 1;
+  color: white;
+  padding: 30px 10px;
+  border-radius: 10px;
+}
+
+.description h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.description p {
+  position: relative;
+  font-size: 25px;
+  top: 20%;
+  left: 10%;
+  width: 80%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.description button {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  outline: 0;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  border: 0;
+  padding: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nodisplay {
+  opacity: 0;
+  z-index: -1;
 }
